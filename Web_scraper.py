@@ -38,6 +38,7 @@ for i in data:
     else:
         print(i[0],False)
 
+    #This is to bypass the web scraper detections on the page, it is not perfect but it works vast majority of the time
     sleep(0.5*random())
 
 #Seperate the download and the compile given the download is likely to trip errors
