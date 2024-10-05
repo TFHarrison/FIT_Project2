@@ -70,34 +70,32 @@ for month in months_f:
     months_f[month]=months_f[month][0]/months_f[month][1]
 
 #Writing to all the files
-with open('Clean/Station_avg.csv', 'w') as f:
+with open('Webpg/Clean/Station_avg.csv', 'w') as f:
     f.write('Lat,long,Rain\n')
     for station in stations:
         f.write(station+','+str(stations[station])+'\n')
 
-with open('Clean/Monthly_avg.csv', 'w') as f:
+with open('Webpg/Clean/Monthly_avg.csv', 'w') as f:
     f.write('Month,Rain\n')
     for month in months_f:
         f.write(month+','+str(months_f[month])+'\n')
 
-with open('Clean/Yearly_avg.csv', 'w') as f:
+with open('Webpg/Clean/Yearly_avg.csv', 'w') as f:
     f.write('Year,Rain\n')
     for year in sorted(years_f):
         f.write(year+','+str(years_f[year])+'\n')
 
-with open('Clean/Station_dev.csv', 'w') as f:
+with open('Webpg/Clean/Station_dev.csv', 'w') as f:
     f.write('Lat,long,Rain\n')
     for station in stations:
         f.write(station+','+str(stations[station]-avg)+'\n')
 
-with open('Clean/Monthly_dev.csv', 'w') as f:
+with open('Webpg/Clean/Monthly_dev.csv', 'w') as f:
     f.write('Month,Rain\n')
     for month in months_f:
         f.write(month+','+str(months_f[month]-avg)+'\n')
 
-with open('Clean/Yearly_dev.csv', 'w') as f:
+with open('Webpg/Clean/Yearly_dev.csv', 'w') as f:
     f.write('Year,Rain\n')
     for year in sorted(years_f):
         f.write(year+','+str(years_f[year]-avg)+'\n')
-
-
