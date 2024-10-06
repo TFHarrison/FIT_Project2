@@ -19,10 +19,10 @@
 <script type="text/javascript">
 
   var vis1 = "TidePlot.vg.json";
-  vegaEmbed('#main_plt', vis1);
+  vegaEmbed('#main_plt', vis1).then(function(result) {}).catch(console.error);
 
   var vis2 = "Tidal.vg.json";
-  vegaEmbed('#sub_plt', vis2);
+  vegaEmbed('#sub_plt', vis2).then(function(result) {}).catch(console.error);
 </script>
 
 </body>
