@@ -32,10 +32,6 @@
             "field": "Mean",
             "type": "quantitative",
             "title": "Mean Level"
-        },
-        "color": {
-            "field": "Year",
-            "type": "quantitative"
         }
     },
     "layer": [
