@@ -1,0 +1,30 @@
+{
+"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+"width": 500,
+"height": 400,
+"title": "Tide levels at WilliamsTown ",
+"data": {
+"url": "https://raw.githubusercontent.com/TFHarrison/WK10_HW/main/Tides.csv"
+},
+"mark": "circle",
+"encoding": {
+"x": {
+"field": "Mth",
+"type": "nominal",
+"title": "Month"
+},
+"y": {
+"field": "Mean",
+"type": "quantitative",
+"title": "Mean Level"
+},
+"color": {
+"field": "Year",
+"type": "nominal"
+},
+"size": {
+"field": "Maximum",
+"type": "quantitative"
+}
+}
+}
