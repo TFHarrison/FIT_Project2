@@ -4,34 +4,53 @@
     "height": 600,
     "title": "Tide levels at WilliamsTown ",
     "data": {
-        "url": "https://raw.githubusercontent.com/TFHarrison/FIT_Project2/main/WK10%20hW/Tides.csv"
+        "url": "https://raw.githubusercontent.com/TFHarrison/WK10_HW/main/Tides.csv"
     },
     "params": [
         {
-            "name":"Year",
+            "name":"Year_min",
             "value":1966,
             "bind":{
                 "input":"range",
                 "min":1966,
                 "max":2022,
                 "step":1,
-                "name":"Year : "
+                "name":"Start Year : "
+            }
+        },
+        {
+            "name":"Year_max",
+            "value":2022,
+            "bind":{
+                "input": "range",
+                "min":1966,
+                "max":2022,
+                "step": 1,
+                "name": "End year : "
             }
         }
     ],
     "transform": [
-        {"filter": "datum.Year == Year"}
+        {"filter": "datum.Year >= Year_min && datum.year <= Year_max"}
     ],
     "encoding": {
         "x": {
             "field": "Mth",
             "type": "quantitative",
-            "title": "Month"
+            "title": "Month",
+            "axis": {"tickCount": 12},
+            "scale": {"domain":[1,12]}
         },
         "y": {
             "field": "Mean",
             "type": "quantitative",
-            "title": "Mean Level"
+            "title": "Mean Level",
+            "axis": {"tickCount": 10},
+            "scale": {"domain":[0,1]}
+        },
+        "color": {
+            "field": "Year",
+            "type": "quantitative"
         }
     },
     "layer": [
