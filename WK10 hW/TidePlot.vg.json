@@ -4,7 +4,7 @@
     "height": 600,
     "title": "Tide levels at WilliamsTown ",
     "data": {
-        "url": "https://raw.githubusercontent.com/TFHarrison/WK10_HW/main/Tides.csv"
+        "url": "https://raw.githubusercontent.com/TFHarrison/FIT_Project2/main/WK10%20hW/Tides.csv"
     },
     "params": [
         {
