@@ -6,24 +6,22 @@
     "data": {
         "url": "https://raw.githubusercontent.com/TFHarrison/WK10_HW/main/Tides.csv"
     },
-
     "params": [
         {
-        "name":"Year",
-        "value":1966,
-        "bind":{
-            "input":"range",
-            "min":1966,
-            "max":2022,
-            "step":1,
-            "name":"Year : "
-        }
+            "name":"Year",
+            "value":1966,
+            "bind":{
+                "input":"range",
+                "min":1966,
+                "max":2022,
+                "step":1,
+                "name":"Year : "
+            }
         }
     ],
     "transform": [
         {"filter": "datum.Year == Year"}
     ],
-
     "encoding": {
         "x": {
             "field": "Mth",
@@ -40,10 +38,9 @@
             "type": "quantitative"
         }
     },
-
     "layer": [
         {
-            "mark": "line",
+            "mark": "circle",
             "encoding": {
                 "tooltip": [
                     {"field":"Year","type": "quantitative"},
