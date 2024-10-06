@@ -31,7 +31,7 @@
         }
     ],
     "transform": [
-        {"filter": "datum.Year >= Year_min && datum.year <= Year_max"}
+        {"filter": "datum.Year >= Year_min && datum.Year <= Year_max"}
     ],
     "encoding": {
         "x": {
