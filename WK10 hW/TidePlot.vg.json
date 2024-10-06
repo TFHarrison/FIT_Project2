@@ -50,7 +50,8 @@
         },
         "color": {
             "field": "Year",
-            "type": "quantitative"
+            "type": "quantitative",
+            "scale": {"domain":[1966,2024]}
         }
     },
     "layer": [
@@ -67,5 +68,4 @@
             }
         }
     ]
-
 }
