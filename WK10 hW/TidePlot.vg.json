@@ -1,45 +1,59 @@
 {
-"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-"width": 800,
-"height": 600,
-"title": "Tide levels at WilliamsTown ",
-"data": {
-"url": "https://raw.githubusercontent.com/TFHarrison/WK10_HW/main/Tides.csv"
-},
-"mark": "line",
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 800,
+    "height": 600,
+    "title": "Tide levels at WilliamsTown ",
+    "data": {
+        "url": "https://raw.githubusercontent.com/TFHarrison/WK10_HW/main/Tides.csv"
+    },
 
-"params": [
-{
-"name":"Year",
-"value":1966,
-"bind":{
-"input":"range",
-"min":1966,
-"max":2022,
-"step":1,
-"name":"Year : "
-}
-}
-],
-"transform": [
-{"filter": "datum.Year == Year"}
-],
+    "params": [
+        {
+        "name":"Year",
+        "value":1966,
+        "bind":{
+            "input":"range",
+            "min":1966,
+            "max":2022,
+            "step":1,
+            "name":"Year : "
+        }
+        }
+    ],
+    "transform": [
+        {"filter": "datum.Year == Year"}
+    ],
 
-"encoding": {
-"x": {
-"field": "Mth",
-"type": "nominal",
-"title": "Month"
-},
-"y": {
-"field": "Mean",
-"type": "quantitative",
-"title": "Mean Level"
-},
-"color": {
-"field": "Year",
-"type": "nominal"
-},
-}
+    "encoding": {
+        "x": {
+            "field": "Mth",
+            "type": "quantitative",
+            "title": "Month"
+        },
+        "y": {
+            "field": "Mean",
+            "type": "quantitative",
+            "title": "Mean Level"
+        },
+        "color": {
+            "field": "Year",
+            "type": "quantitative"
+        }
+    },
+
+    "layer": [
+        {
+            "mark": "line",
+            "encoding": {
+                "tooltip": [
+                    {"field":"Year","type": "quantitative"},
+                    {"field":"Mth","type": "quantitative"},
+                    {"field":"Minimum","type": "quantitative", "format":","},
+                    {"field":"Maximum","type": "quantitative", "format":","},
+                    {"field":"Mean","type": "quantitative", "format":","}
+                ]
+            }
+        }
+    ]
 
 }
