@@ -2,37 +2,10 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 800,
     "height": 600,
-    "title": "Tide levels at Williamstown",
+    "title": "Average Tide per month",
     "data": {
-        "url": "https://raw.githubusercontent.com/TFHarrison/FIT_Project2/main/WK10%20hW/Tides.csv"
+        "url": "https://raw.githubusercontent.com/TFHarrison/FIT_Project2/main/WK10%20hW/Tidal.csv"
     },
-    "params": [
-        {
-            "name":"Year_min",
-            "value":1966,
-            "bind":{
-                "input":"range",
-                "min":1966,
-                "max":2022,
-                "step":1,
-                "name":"Start Year : "
-            }
-        },
-        {
-            "name":"Year_max",
-            "value":2022,
-            "bind":{
-                "input": "range",
-                "min":1966,
-                "max":2022,
-                "step": 1,
-                "name": "End year : "
-            }
-        }
-    ],
-    "transform": [
-        {"filter": "datum.Year >= Year_min && datum.Year <= Year_max"}
-    ],
     "encoding": {
         "x": {
             "field": "Mth",
@@ -64,37 +37,6 @@
                     {"field":"Maximum","type": "quantitative", "format":","},
                     {"field":"Mean","type": "quantitative", "format":","}
                 ]
-            }
-        },
-        {
-            "mark":"circle",
-            "encoding": {
-                "tooltip": [
-                    {"field":"Year","type": "quantitative"},
-                    {"field":"Minimum","type": "quantitative", "format":","},
-                    {"field":"Maximum","type": "quantitative", "format":","},
-                    {"field":"Mean","type": "quantitative", "format":","}
-                ]
-            }
-        },
-        {
-            "mark":{
-                "type": "text",
-                "align": "right",
-                "baseline": "middle",
-                "dx": -12,
-                "fontSize": 12
-            },
-            "encoding": {
-                "text": {"field":"Year", "type": "quantitative"},
-                "color": {"value": "black"},
-                "opacity": {
-                    "condition": {
-                        "test": "datum.Year%10==0 && datum.Mth==6",
-                        "value": 1
-                    },
-                    "value": 0
-                }
             }
         }
     ]
