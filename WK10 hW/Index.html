@@ -13,16 +13,16 @@
 </head>
 <body>
   
-<div id="#main_plt"></div>
-<div id="#sub_plt"></div>
+<div id="main_plt"></div>
+<div id="sub_plt"></div>
 
 <script type="text/javascript">
 
   var vis1 = "TidePlot.vg.json";
-  vegaEmbed('#main_plt', vis1).then(function(result) {}).catch(console.error);
+  vegaEmbed('#main_plt', vis1);
 
   var vis2 = "Tidal.vg.json";
-  vegaEmbed('#sub_plt', vis2).then(function(result) {}).catch(console.error);
+  vegaEmbed('#sub_plt', vis2);
 </script>
 
 </body>
