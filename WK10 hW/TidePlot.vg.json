@@ -1,12 +1,30 @@
 {
 "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-"width": 500,
-"height": 400,
+"width": 800,
+"height": 600,
 "title": "Tide levels at WilliamsTown ",
 "data": {
 "url": "https://raw.githubusercontent.com/TFHarrison/WK10_HW/main/Tides.csv"
 },
-"mark": "circle",
+"mark": "line",
+
+"params": [
+{
+"name":"Year",
+"value":1966,
+"bind":{
+"input":"range",
+"min":1966,
+"max":2022,
+"step":1,
+"name":"Year : "
+}
+}
+],
+"transform": [
+{"filter": "datum.Year == Year"}
+],
+
 "encoding": {
 "x": {
 "field": "Mth",
@@ -22,9 +40,6 @@
 "field": "Year",
 "type": "nominal"
 },
-"size": {
-"field": "Maximum",
-"type": "quantitative"
 }
-}
+
 }
