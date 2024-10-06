@@ -55,7 +55,7 @@
     },
     "layer": [
         {
-            "mark": "circle",
+            "mark": "line",
             "encoding": {
                 "tooltip": [
                     {"field":"Year","type": "quantitative"},
