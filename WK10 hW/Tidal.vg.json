@@ -6,6 +6,7 @@
     "data": {
         "url": "https://raw.githubusercontent.com/TFHarrison/FIT_Project2/main/WK10%20hW/Tidal.csv"
     },
+    "mark":"line",
     "encoding": {
         "x": {
             "field": "Mth",
@@ -26,18 +27,5 @@
             "type": "quantitative",
             "scale": {"domain":[1966,2024]}
         }
-    },
-    "layer": [
-        {
-            "mark": "line",
-            "encoding": {
-                "tooltip": [
-                    {"field":"Year","type": "quantitative"},
-                    {"field":"Minimum","type": "quantitative", "format":","},
-                    {"field":"Maximum","type": "quantitative", "format":","},
-                    {"field":"Mean","type": "quantitative", "format":","}
-                ]
-            }
-        }
-    ]
+    }
 }
