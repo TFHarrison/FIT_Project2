@@ -21,11 +21,6 @@
             "title": "Mean Level",
             "axis": {"tickCount": 10},
             "scale": {"domain":[0,1]}
-        },
-        "color": {
-            "field": "Year",
-            "type": "quantitative",
-            "scale": {"domain":[1966,2024]}
         }
     }
 }
