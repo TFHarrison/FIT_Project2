@@ -90,7 +90,7 @@
                 "color": {"value": "black"},
                 "opacity": {
                     "condition": {
-                        "test": "datum[Year]%10==0",
+                        "test": "datum.Year%10==0",
                         "value": 1
                     },
                     "value": 0
