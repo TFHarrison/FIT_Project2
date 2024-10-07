@@ -1,0 +1,26 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 1000,
+    "height": 500,
+    "title": "Mean monthly deviation",
+    "data": {
+        "url": "https://raw.githubusercontent.com/TFHarrison/FIT_Project2/main/Clean/Monthly_dev.csv"
+    },
+    "mark":"line",
+    "encoding": {
+        "x": {
+            "field": "Month",
+            "type": "quantitative",
+            "title": "Month",
+            "axis": {"tickCount": 12},
+            "scale": {"domain":[1,12]}
+        },
+        "y": {
+            "field": "Rain",
+            "type": "quantitative",
+            "title": "Mean Rain (ml)",
+            "axis": {"tickCount": 20},
+            "scale": {"domain":[-25,25]}
+        }
+    }
+}
