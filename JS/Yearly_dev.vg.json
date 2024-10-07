@@ -11,7 +11,7 @@
         "x": {
             "field": "Year",
             "type": "quantitative",
-            "title": "Month",
+            "title": "Year",
             "axis": {"tickCount": 17},
             "scale": {"domain":[1854,2024]}
         },
