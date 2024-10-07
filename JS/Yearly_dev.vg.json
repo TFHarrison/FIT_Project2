@@ -19,7 +19,13 @@
             "field": "Rain",
             "type": "quantitative",
             "title": "Mean Rain (ml)",
-            "axis": {"tickCount": 20},
+            "axis": {
+                "tickCount": 10,
+                "gridColor": {
+                    "condition": {"test":"datum.Rain > 0", "value":"blue"},
+                    "value":"red"
+                }
+            },
             "scale": {"domain":[-25,25]}
         }
     }
