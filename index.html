@@ -47,13 +47,6 @@
     <div id="Avg_M" class="sqr elem"></div>
 </div>
 
-<div id="Dif_M" class="blk full"></div>
-
-<div class="blk">
-    <h2 class="Left">Heading</h2>
-    <p>Lorum Ipsum</p>
-</div>
-
 <div id="Map_dif" class="blk full"></div>
 
 <footer class="HF_container">
@@ -69,9 +62,6 @@
 
   var yr_avg = "JS/Yearly_avg.vg.json";
   vegaEmbed('#Avg_Y', yr_avg).then(function(result) {}).catch(console.error);
-
-  var mon_avg = "JS/Monthly_dev.vg.json";
-  vegaEmbed('#Dif_M', mon_avg).then(function(result) {}).catch(console.error);
 
   var yr_avg = "JS/Yearly_dev.vg.json";
   vegaEmbed('#Dif_Y', yr_avg).then(function(result) {}).catch(console.error);
