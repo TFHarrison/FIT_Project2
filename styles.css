@@ -17,6 +17,7 @@ h1{
     font-size: 50px;
     text-decoration-line: underline;
     margin-top:10px;
+    margin-bottom: 25px;
     font-family: 'Times New Roman', Times, serif;
 }
 
@@ -25,10 +26,11 @@ h2{
     font-size: 30px;
     text-decoration-line: underline;
     font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 15px;
 }
 
 p{
-    height:470px;
+    height:300px;
     font-size: 12px;
     font-family: sans-serif;
 }
