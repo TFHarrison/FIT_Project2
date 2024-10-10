@@ -3,6 +3,7 @@
     "width": "container",
     "height": "container",
     "title": "Rainfall over victoria",
+    "projection": {"type": "mercator"},
     "layer": [
       {
         "data": {
