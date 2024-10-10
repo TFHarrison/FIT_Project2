@@ -12,7 +12,7 @@
             "field": "Month",
             "type": "quantitative",
             "title": "Month",
-            "axis": {"tickCount": 12},
+            "axis": {"tickCount": 8},
             "scale": {"domain":[1,12]}
         },
         "y": {
