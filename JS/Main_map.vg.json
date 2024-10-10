@@ -3,7 +3,7 @@
     "width": "container",
     "height": "container",
     "title": "Rainfall over victoria",
-    "projection": {"type": "equalEarth"},
+    "projection": {"type": "conicEqualArea"},
     "layer": [
       {
         "data": {
