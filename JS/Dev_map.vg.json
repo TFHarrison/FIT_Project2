@@ -18,17 +18,18 @@
         },
         "mark": {"type": "circle", "opacity":1},
         "encoding": {
-          "longitude": {"field": "long", "type": "quantitative"},
+          "longitude": {"field": "Long", "type": "quantitative"},
           "latitude": {"field": "Lat", "type": "quantitative"},
           "color": {
             "field": "Rain",
             "type": "quantitative",
-            "title": "Rainfall deviation at each station",
+            "title": "Deviation from mean (mm)",
             "scale": {"scheme": "redblue", "domainMid": 0},
             "legend": {"tickCount": 10}
           },
           "tooltip":[
-            {"field":"Rain","type": "quantitative","format":".2f"}
+            {"field":"Name","type": "nominal","title":"Location: "},
+            {"field":"Rain","type": "quantitative","format":".2f","title":"Deviation (mm): "}
           ]
         }
       }
