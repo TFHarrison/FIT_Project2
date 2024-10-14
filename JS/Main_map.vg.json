@@ -14,8 +14,41 @@
       },
       {
         "data": {
-          "url": "https://raw.githubusercontent.com/TFHarrison/FIT_Project2/main/Clean/Station_avg.csv"
+          "url": "https://raw.githubusercontent.com/TFHarrison/FIT_Project2/main/Clean/Station_data.csv"
         },
+        "params": [
+            {
+                "name": "year",
+                "value":2024,
+                "select":"point",
+                "bind":{
+                    "input": "range",
+                    "max": 2024,
+                    "min": 1854,
+                    "step": 1,
+                    "name": "Year"
+                }
+            },
+            {
+                "name": "showall",
+                "select":"point",
+                "bind":{
+                    "input": "select",
+                    "options":[
+                        2030,
+                        2050
+                    ],
+                    "labels": [
+                        "Net mean",
+                        "Year mean"
+                    ],
+                    "name": "Select: "
+                }
+            }
+        ],
+        "transform": [
+            {"filter":"(datum.year==year && select==2050) || datum.year==select"}
+        ],
         "mark": {"type": "circle", "opacity":1, "tooltip": {"content": "data"}},
         "encoding": {
           "longitude": {"field": "Long", "type": "quantitative"},
@@ -25,7 +58,7 @@
             "type": "quantitative",
             "title": "Mean Rain (mm)",
             "scale": {"scheme": "blues"}
-        }
+          }
         }
       }
     ]
