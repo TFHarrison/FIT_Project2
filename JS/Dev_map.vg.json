@@ -18,7 +18,7 @@
         },
         "mark": {"type": "circle", "tooltip": {"content": "data"}},
         "encoding": {
-          "longitude": {"field": "Long", "type": "quantitative"},
+          "longitude": {"field": "long", "type": "quantitative"},
           "latitude": {"field": "Lat", "type": "quantitative"},
           "color": {
             "field":"Rain",
