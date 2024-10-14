@@ -24,16 +24,11 @@
 
 <div id="Main_map" class="blk full"></div>
 
-<!--<div class="blk">
-    <h2 class="Left">Overall Rainfall Paterns In Victoria</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-</div>-->
-
 <div class="blk cont">
     <div id="Avg_Y" class="sqr elem"></div>
     <div class="elem">
-        <h2 class="Center">Patterns over the state</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <h2 class="Center">Rain Patterns over the years</h2>
+        <p>There are no clear trends for the rain data over the years at least based off these visualizations, this is because of the high year on year deviations of the data.  However what these visualizations do a good job at showing is the periods of exceptionaly high and low raifall in the state as can be seen on the graph.</p>
     </div>
 </div>
 
@@ -41,8 +36,8 @@
 
 <div class="blk cont">
     <div class="elem">
-        <h2 class="Center">Heading</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <h2 class="Center">Rain Patterns over the state</h2>
+        <p>The rainfall over the state ccen be seen to fluctuate in a sinysoidal pattern over the months, this is as would be expected as the seasons bring with them the rainfall.  As can be seen in the below map there is substantialy more of the rainfall concentrated over the east of the state, this is located on the mountainous alpine areas, places that would intuitivly promote higher rainfall, given the mountains inhibit the ability of clouds to pass.  On the other hand the north western side of the state has far below the state average of rain, this is the region of the state that trends towards desert as can be seen.  This map shows the optimal locations for amy catchments or areas that would want higher rainfall such as farmers or dams.</p>
     </div>
     <div id="Avg_M" class="sqr elem"></div>
 </div>
@@ -56,10 +51,6 @@
 </footer>
 
 <script type="text/javascript">
-
-    var MN_map = "JS/Main_map.vg.json";
-    vegaEmbed('#Main_map', MN_map).then(function(result) {}).catch(console.error);
-
     var mon_avg = "JS/Monthly_avg.vg.json";
     vegaEmbed('#Avg_M', mon_avg).then(function(result) {}).catch(console.error);
 
@@ -71,6 +62,9 @@
 
     var dev_map = "JS/Dev_map.vg.json";
     vegaEmbed('#Map_dif', dev_map).then(function(result) {}).catch(console.error);
+
+    var MN_map = "JS/Main_map.vg.json";
+    vegaEmbed('#Main_map', MN_map).then(function(result) {}).catch(console.error);
 </script>
 
 </body>
