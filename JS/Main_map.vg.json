@@ -10,22 +10,22 @@
           "url": "https://raw.githubusercontent.com/TFHarrison/FIT_Project2/main/Clean/vic_localities.topojson",
           "format": {"type": "topojson", "feature": "vic_localities"}
         },
-        "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"}
+        "mark": {"type": "geoshape", "fill": "darkgray", "stroke": "black"}
       },
       {
         "data": {
           "url": "https://raw.githubusercontent.com/TFHarrison/FIT_Project2/main/Clean/Station_avg.csv"
         },
-        "mark": {"type": "circle", "tooltip": {"content": "data"}},
+        "mark": {"type": "circle", "opacity":1, "tooltip": {"content": "data"}},
         "encoding": {
           "longitude": {"field": "Long", "type": "quantitative"},
           "latitude": {"field": "Lat", "type": "quantitative"},
           "color": {
-            "field": "Mean",
+            "field":"Mean",
             "type": "quantitative",
-            "title": "Mean Rain at each station",
+            "title": "Mean Rain (mm)",
             "scale": {"scheme": "blues"}
-          }
+        }
         }
       }
     ]
