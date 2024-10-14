@@ -41,7 +41,7 @@
           },
           "tooltip":[
             {"field":"Name","type": "nominal","title":"Location: "},
-            {"field":"Mean","type": "quantitative","format":".2f","title":"Deviation (mm): "}
+            {"field":"Mean","type": "quantitative","format":".2f","title":"Mean Rainfall (mm): "}
           ]
         }
       }
