@@ -18,7 +18,7 @@
         "y": {
             "field": "Rain",
             "type": "quantitative",
-            "title": "Mean Rain (ml)",
+            "title": "Mean Rain (mm)",
             "axis": {"tickCount": 11},
             "scale": {"domain":[30,85]}
         },
