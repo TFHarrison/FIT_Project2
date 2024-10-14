@@ -18,18 +18,6 @@
         },
         "params": [
           {
-            "name": "yearsel",
-            "value": 2024,
-            "select": "point",
-            "bind": {
-              "input": "range",
-              "max": 2024,
-              "min": 1854,
-              "step": 1,
-              "name": "Year: "
-            }
-          },
-          {
             "name": "showall",
             "select": "point",
             "bind": {
@@ -41,7 +29,7 @@
           }
         ],
         "transform": [
-          {"filter": "(datum.Year==yearsel && showall==2050) || datum.Year==showall"}
+          {"filter": "datum.Year==showall"}
         ],
         "mark": {"type": "circle", "opacity": 1, "tooltip": {"content": "data"}},
         "encoding": {
