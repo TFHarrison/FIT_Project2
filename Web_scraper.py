@@ -66,14 +66,14 @@ for i in data:
 
 #Seperate the download and the compile given the download is likely to trip errors
 
+
 #this is a defaulkt file name used by BOM
 fname=lambda x: f'{x}/IDCJAC0001_{x}_Data1.csv'
 
 #Open the main file tro compile to
 with open('Main_data.csv', 'w') as Main:
-
     #set up headers
-    Main.write('Lat,long,Year,Month,Rain\n')
+    Main.write('Name,Lat,long,Year,Month,Rain\n')
 
     #loop through the weather stations
     for i in data:
@@ -86,7 +86,8 @@ with open('Main_data.csv', 'w') as Main:
         with open(fname(i[0]), 'r') as f:
 
             #Write the extracted data to the man file
-            Main.write('\n'.join([','.join(i[2:4]+x.split(',')[2:-1]) for x in f.read().strip('\n').split('\n')[1:]])+'\n')
+            Main.write('\n'.join([','.join(i[1:4]+x.split(',')[2:-1]) for x in f.read().strip('\n').split('\n')[1:]])+'\n')
         
         print(i[0])
             
+
