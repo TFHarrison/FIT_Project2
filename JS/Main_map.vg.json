@@ -7,6 +7,7 @@
     "params": [
         {
         "name": "yearsel",
+        "value":2030,
         "bind": {
             "input": "select",
             "options": [2030, 1860, 1870, 1880, 1890, 1900, 1910, 1920, 1930, 1940, 1950, 1960, 1970, 1980, 1990, 2000, 2010, 2020],
@@ -27,10 +28,8 @@
         "data": {
           "url": "https://raw.githubusercontent.com/TFHarrison/FIT_Project2/main/Clean/Station_data.csv"
         },
-        "transform": [
-          {"filter": "datum.Year==yearsel"}
-        ],
-        "mark": {"type": "circle", "opacity": 1, "tooltip": {"content": "data"}},
+        "transform": [{"filter": "datum.Year==yearsel"}],
+        "mark": {"type": "circle", "opacity": 1},
         "encoding": {
           "longitude": {"field": "Long", "type": "quantitative"},
           "latitude": {"field": "Lat", "type": "quantitative"},
@@ -39,7 +38,11 @@
             "type": "quantitative",
             "title": "Mean Rain (mm)",
             "scale": {"scheme": "blues"}
-          }
+          },
+          "tooltip":[
+            {"field":"Name","type": "nominal","title":"Location: "},
+            {"field":"Rain","type": "quantitative","format":".2f","title":"Deviation (mm): "}
+          ]
         }
       }
     ]
