@@ -57,8 +57,8 @@
 
 <script type="text/javascript">
 
-    var mon_avg = "JS/Main_map.vg.json";
-    vegaEmbed('#Main_map', mon_avg).then(function(result) {}).catch(console.error);
+    var MN_map = "JS/Main_map.vg.json";
+    vegaEmbed('#Main_map', MN_map).then(function(result) {}).catch(console.error);
 
     var mon_avg = "JS/Monthly_avg.vg.json";
     vegaEmbed('#Avg_M', mon_avg).then(function(result) {}).catch(console.error);
@@ -66,8 +66,11 @@
     var yr_avg = "JS/Yearly_avg.vg.json";
     vegaEmbed('#Avg_Y', yr_avg).then(function(result) {}).catch(console.error);
 
-    var yr_avg = "JS/Yearly_dev.vg.json";
-    vegaEmbed('#Dif_Y', yr_avg).then(function(result) {}).catch(console.error);
+    var yr_dev = "JS/Yearly_dev.vg.json";
+    vegaEmbed('#Dif_Y', yr_dev).then(function(result) {}).catch(console.error);
+
+    var dev_map = "JS/Dev_map.vg.json";
+    vegaEmbed('#Map_dif', dev_map).then(function(result) {}).catch(console.error);
 </script>
 
 </body>
