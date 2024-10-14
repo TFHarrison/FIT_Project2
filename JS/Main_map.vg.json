@@ -19,29 +19,17 @@
         "params": [
           {
             "name": "yearsel",
-            "value": 2024,
-            "select": "point",
-            "bind": {
-              "input": "range",
-              "max": 2020,
-              "min": 1860,
-              "step": 10,
-              "name": "Year: "
-            }
-          },
-          {
-            "name": "showall",
             "select": "point",
             "bind": {
               "input": "select",
-              "options": [2030, 2050],
-              "labels": ["Net mean", "Year mean"],
-              "name": "Select: "
+              "options": [2030, 1860, 1870, 1880, 1890, 1900, 1910, 1920, 1930, 1940, 1950, 1960, 1970, 1980, 1990, 2000, 2010, 2020],
+              "labels": ["SHOWALL", "1860", "1870", "1880", "1890", "1900", "1910", "1920", "1930", "1940", "1950", "1960", "1970", "1980", "1990", "2000", "2010", "2020"],
+              "name": "Year: "
             }
           }
         ],
         "transform": [
-          {"filter": "(datum.Year==yearsel && showall==2050) || datum.Year==showall"}
+          {"filter": "datum.Year==yearsel"}
         ],
         "mark": {"type": "circle", "opacity": 1, "tooltip": {"content": "data"}},
         "encoding": {
