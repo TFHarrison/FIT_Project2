@@ -16,7 +16,7 @@
         "data": {
           "url": "https://raw.githubusercontent.com/TFHarrison/FIT_Project2/main/Clean/Station_dev.csv"
         },
-        "mark": {"type": "circle", "tooltip": {"content": "data"}},
+        "mark": {"type": "circle","stroke":"black","opacity":1, "tooltip": {"content": "data"}},
         "encoding": {
           "longitude": {"field": "long", "type": "quantitative"},
           "latitude": {"field": "Lat", "type": "quantitative"},
