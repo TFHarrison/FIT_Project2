@@ -28,9 +28,6 @@
             }
           }
         ],
-        "transform": [
-          {"filter": "datum.Year==showall"}
-        ],
         "mark": {"type": "circle", "opacity": 1, "tooltip": {"content": "data"}},
         "encoding": {
           "longitude": {"field": "Long", "type": "quantitative"},
