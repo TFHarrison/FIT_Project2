@@ -12,15 +12,19 @@
             "field": "Month",
             "type": "quantitative",
             "title": "Month",
-            "axis": {"tickCount": 8},
+            "axis": {"tickCount": 12},
             "scale": {"domain":[1,12]}
         },
         "y": {
             "field": "Rain",
             "type": "quantitative",
-            "title": "Mean Rain (ml)",
-            "axis": {"tickCount": 20},
+            "title": "Mean Rain (mm)",
+            "axis": {"tickCount": 8},
             "scale": {"domain":[35,75]}
-        }
+        },
+        "tooltip":[
+            {"field":"Month","type": "quantitative","title":"Month: "},
+            {"field":"Rain","type": "quantitative","format":".2f","title":"Rainfall (mm): "}
+        ]
     }
 }
