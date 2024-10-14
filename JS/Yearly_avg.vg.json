@@ -21,6 +21,10 @@
             "title": "Mean Rain (ml)",
             "axis": {"tickCount": 11},
             "scale": {"domain":[30,85]}
-        }
+        },
+        "tooltip":[
+            {"field":"Year","type": "quantitative","title":"Year: "},
+            {"field":"Rain","type": "quantitative","format":".2f","title":"Rainfall (mm): "}
+        ]
     }
 }
