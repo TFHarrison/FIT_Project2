@@ -6,7 +6,6 @@
     "data": {
         "url": "https://raw.githubusercontent.com/TFHarrison/FIT_Project2/main/Clean/Yearly_dev.csv"
     },
-    "mark":"bar",
     "encoding": {
         "x": {
             "field": "Year",
@@ -27,10 +26,34 @@
                 }
             },
             "scale": {"domain":[-25,25]}
-        },
-        "color":{
-            "condition":{"test":"datum.Rain >=0", "value":"blue"},
-            "value":"red"
         }
-    }
+    },
+    "layer":[
+        {
+            "mark":"bar",
+            "encoding": {
+                "color":{
+                    "condition":{"test":"datum.Rain >=0", "value":"blue"},
+                    "value":"red"
+                },
+                "tooltip":[
+                    {"field":"Year","type": "quantitative","title":"Year: "},
+                    {"field":"Rain","type": "quantitative","format":".2f","title":"Deviation (mm): "}
+                ]
+            }
+        },
+        {
+            "mark":{
+                "type": "text",
+                "align": "right",
+                "baseline": "middle",
+                "dx": -12,
+                "fontSize": 12
+            },
+            "encoding": {
+                "text": {"field":"Note", "type": "nominal"},
+                "color": {"value": "black"}
+            }
+        }
+    ]
 }
