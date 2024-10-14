@@ -47,7 +47,7 @@
             }
         ],
         "transform": [
-            {"filter":"(datum.year==year && select==2050) || datum.year==select"}
+            {"filter":"(datum.year==year && showall==2050) || datum.year==showall"}
         ],
         "mark": {"type": "circle", "opacity":1, "tooltip": {"content": "data"}},
         "encoding": {
